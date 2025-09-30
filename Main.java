@@ -14,7 +14,9 @@ public class Main
 
     lastFirstN(word1, word2, N);*/
 
-    stringManip("kello","alphred");
+    /*stringManip("kello","alphred");*/
+
+    System.out.println(removeStr("bbbbbbadboom", "adc"));
   }
 
   /** Precondition: s1 and s2 are not null
@@ -68,7 +70,26 @@ public class Main
   */
   public static String removeStr(String s1, String s2)
   {
-    String output = null;
+
+    /*int firstOfAda = s1.indexOf(s2);//6
+    String firstPart = s1.substring(0,firstOfAda);
+    String lastLetterOfAda = s2.substring(s2.length()-1); //last a
+    int endOfAda = s1.indexOf(lastLetterOfAda);
+    String lastPart = s1.substring(endOfAda+1);
+
+    String output = firstPart + lastPart;*/
+
+    String output;
+    String before;
+    String after;
+
+    int indexOfs2 = s1.indexOf(s2);
+    int indexOfEnds2 = indexOfs2 + s2.length();
+
+    before = s1.substring(0, indexOfs2);
+    after = s1.substring(indexOfEnds2);
+
+    output = before + after;
     return output;
   }
 }
